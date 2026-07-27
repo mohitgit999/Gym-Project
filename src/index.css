@@ -167,12 +167,7 @@ img {
 }
 
 .text-accent {
-  background: linear-gradient(to right, var(--accent-primary), var(--accent-secondary), var(--accent-tertiary));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  background-size: 200% auto;
-  animation: shine 5s linear infinite;
+  color: var(--text-primary);
 }
 
 .btn {
@@ -213,6 +208,10 @@ img {
   color: var(--bg-primary);
 }
 
+.pill-btn {
+  border-radius: var(--radius-full);
+}
+
 .btn-sm {
   padding: 0.5rem 1.5rem;
   font-size: 0.85rem;
@@ -221,7 +220,7 @@ img {
 
 .text-outline {
   color: transparent;
-  -webkit-text-stroke: 1px var(--text-secondary);
+  -webkit-text-stroke: 1px var(--accent-primary);
 }
 
 .text-outline.purple {
@@ -230,19 +229,7 @@ img {
 
 /* Utilities & Premium Touches */
 .text-gradient {
-  background: linear-gradient(
-    to right, 
-    var(--accent-primary), 
-    var(--accent-secondary), 
-    var(--accent-tertiary), 
-    var(--accent-secondary), 
-    var(--accent-primary)
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  background-size: 200% auto;
-  animation: shine 8s linear infinite;
+  color: var(--text-primary);
 }
 
 .premium-glow {
