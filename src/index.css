@@ -84,15 +84,16 @@
 
 html,
 body {
-  background-color: var(--bg-primary);
-  background-image: 
-    radial-gradient(at 0% 0%, var(--grad-3) 0px, transparent 60%),
-    radial-gradient(at 100% 0%, var(--grad-4) 0px, transparent 60%),
-    radial-gradient(at 100% 100%, var(--grad-2) 0px, transparent 60%),
-    radial-gradient(at 0% 100%, var(--grad-1) 0px, transparent 60%);
-  background-size: 200% 200%;
+  background: radial-gradient(
+    circle at center, 
+    var(--grad-3) 0%, 
+    var(--grad-1) 35%, 
+    var(--grad-4) 65%, 
+    var(--grad-2) 100%
+  );
+  background-size: 300% 300%;
   background-attachment: fixed;
-  animation: meshBG 20s ease infinite;
+  animation: meshBG 15s ease-in-out infinite alternate;
   color: var(--text-primary);
   font-family: var(--font-body);
   line-height: 1.6;
@@ -102,10 +103,8 @@ body {
 
 @keyframes meshBG {
   0% { background-position: 0% 0%; }
-  25% { background-position: 100% 0%; }
-  50% { background-position: 100% 100%; }
-  75% { background-position: 0% 100%; }
-  100% { background-position: 0% 0%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 50% 100%; }
 }
 
 h1,
