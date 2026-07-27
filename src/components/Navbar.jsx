@@ -1,11 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import { FaBars, FaTimes } from 'react-icons/fa';
+import { FaBars, FaTimes, FaSun, FaMoon } from 'react-icons/fa';
 import './Navbar.css';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [currentUser, setCurrentUser] = useState(null);
+  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'dark');
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+  }, [theme]);
 
   useEffect(() => {
     setCurrentUser(localStorage.getItem('currentUser'));
@@ -60,6 +66,14 @@ const Navbar = () => {
               Login / Sign Up
             </a>
           )}
+          <button 
+            className="theme-toggle interactive" 
+            onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} 
+            style={{ background: 'transparent', border: 'none', color: 'var(--text-primary)', fontSize: '1.2rem', cursor: 'pointer', marginLeft: '1rem', display: 'flex', alignItems: 'center' }}
+            title="Toggle Theme"
+          >
+            {theme === 'dark' ? <FaSun /> : <FaMoon />}
+          </button>
         </div>
 
         <div className="menu-toggle interactive" onClick={() => setMenuOpen(!menuOpen)}>

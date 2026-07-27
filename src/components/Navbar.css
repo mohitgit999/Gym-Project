@@ -9,10 +9,10 @@
 }
 
 .navbar.scrolled {
-  background-color: rgba(10, 10, 10, 0.95);
+  background-color: var(--bg-primary);
   backdrop-filter: blur(10px);
   padding: 1rem 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(128, 128, 128, 0.1);
 }
 
 .navbar-container {
@@ -25,7 +25,7 @@
   display: flex;
   align-items: center;
   gap: 0.2rem;
-  color: #fff;
+  color: var(--text-primary);
 }
 
 .nav-links-center {
@@ -43,7 +43,7 @@
 }
 
 .nav-links-center a:hover, .nav-links-center a.active {
-  color: #fff;
+  color: var(--text-primary);
 }
 
 .nav-actions {

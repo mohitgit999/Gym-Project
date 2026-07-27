@@ -35,6 +35,19 @@
   --transition-normal: 0.3s ease-in-out;
 }
 
+[data-theme="light"] {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f4f4f5;
+  --bg-tertiary: #e4e4e7;
+  
+  --accent-primary: #a259ff;
+  --accent-secondary: #7928ca;
+  
+  --text-primary: #0a0a0a;
+  --text-secondary: #3f3f46;
+  --text-tertiary: #71717a;
+}
+
 * {
   margin: 0;
   padding: 0;
