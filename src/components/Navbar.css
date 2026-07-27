@@ -70,10 +70,14 @@
     left: 0;
     width: 100%;
     flex-direction: column;
-    background-color: var(--bg-secondary);
+    background-color: var(--bg-primary); /* Use primary for mobile menu */
+    background: linear-gradient(135deg, var(--bg-translucent) 0%, transparent 100%);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     padding: 2rem;
     gap: 1.5rem;
     border-bottom: 1px solid var(--border-medium);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   }
 
   .menu-toggle {

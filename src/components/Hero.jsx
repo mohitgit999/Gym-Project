@@ -11,13 +11,13 @@ const Hero = () => {
       {/* Main Typography Background */}
       <div className="hero-bg-text">
         <h1 className="hero-title-main">
-          <span>Sculpt </span>
+          <span className="text-gradient">Sculpt </span>
           <span className="text-outline">Your </span>
-          <span>Body,</span>
+          <span className="text-gradient">Body,</span>
           <br />
-          <span>Elevate </span>
+          <span className="text-gradient">Elevate </span>
           <span className="text-outline">Your </span>
-          <span>Spirit</span>
+          <span className="text-gradient">Spirit</span>
         </h1>
       </div>
 
@@ -58,7 +58,7 @@ const Hero = () => {
 
       {/* Bottom Elements */}
       <div className="hero-bottom-bar container" style={{ justifyContent: 'center' }}>
-        <a href="#exercise" className="btn btn-primary pill-btn interactive">
+        <a href="#exercise" className="btn btn-primary pill-btn interactive premium-glow">
           Let's Start &gt;&gt;&gt;
         </a>
       </div>
