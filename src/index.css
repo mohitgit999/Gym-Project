@@ -6,6 +6,12 @@
   --bg-secondary: #121212;
   --bg-tertiary: #1e1e1e;
   
+  --bg-translucent: rgba(255, 255, 255, 0.02);
+  --border-light: rgba(255, 255, 255, 0.05);
+  --border-medium: rgba(255, 255, 255, 0.1);
+  --shadow-strong: rgba(0, 0, 0, 0.5);
+  --shadow-extreme: rgba(0, 0, 0, 0.7);
+
   --accent-primary: #a259ff; /* Electric Purple accent */
   --accent-secondary: #7928ca;
   
@@ -40,6 +46,12 @@
   --bg-secondary: #f4f4f5;
   --bg-tertiary: #e4e4e7;
   
+  --bg-translucent: rgba(0, 0, 0, 0.03);
+  --border-light: rgba(0, 0, 0, 0.08);
+  --border-medium: rgba(0, 0, 0, 0.15);
+  --shadow-strong: rgba(0, 0, 0, 0.15);
+  --shadow-extreme: rgba(0, 0, 0, 0.2);
+
   --accent-primary: #a259ff;
   --accent-secondary: #7928ca;
   

@@ -23,7 +23,7 @@
   aspect-ratio: 1 / 1;
   border-radius: var(--radius-lg);
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-light);
   background-color: var(--bg-tertiary);
   transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -61,7 +61,7 @@
 
 .training-card:hover .training-img-wrapper {
   transform: translateY(-10px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 15px 30px var(--shadow-strong);
   border-color: var(--accent-primary);
 }
 

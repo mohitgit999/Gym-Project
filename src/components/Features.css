@@ -5,7 +5,7 @@
 /* Logos Strip */
 .logos-strip {
   padding: 3rem 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid var(--border-light);
 }
 
 .logos-grid {
@@ -42,7 +42,7 @@
   background-color: rgba(20, 20, 20, 0.8);
   border-radius: 2rem;
   padding: 4rem;
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-light);
   overflow: hidden; /* Prevent child elements from leaking out */
 }
 
@@ -100,7 +100,7 @@
   object-fit: contain;
   position: relative;
   z-index: 2;
-  filter: drop-shadow(0 20px 30px rgba(0,0,0,0.5));
+  filter: drop-shadow(0 20px 30px var(--shadow-strong));
 }
 
 .image-glow {
@@ -128,7 +128,7 @@
 .discover-card {
   background-color: rgba(30, 30, 30, 0.5);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-light);
   border-radius: var(--radius-lg);
   padding: 3rem 2rem;
   text-align: center;
