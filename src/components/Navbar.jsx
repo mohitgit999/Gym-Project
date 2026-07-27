@@ -48,9 +48,19 @@ const Navbar = () => {
           <a href="#newsletter" className="btn btn-outline btn-sm interactive hide-mobile" style={{borderRadius: '50px'}}>Contact Us</a>
           {currentUser ? (
             <div style={{display: 'flex', alignItems: 'center', gap: '1rem', marginLeft: '1rem'}}>
-              <span style={{color: 'var(--text-secondary)', fontSize: '0.9rem'}}>Hi, <strong style={{color: 'var(--accent-primary)'}}>{currentUser}</strong></span>
+              <div 
+                className="btn btn-outline btn-sm hide-mobile" 
+                style={{
+                  borderRadius: '50px', 
+                  cursor: 'default', 
+                  border: '1px solid var(--border-light)',
+                  padding: 'clamp(0.4rem, 2vw, 0.6rem) clamp(1rem, 3vw, 1.5rem)'
+                }}
+              >
+                Hi, <strong className="text-gradient" style={{marginLeft: '0.4rem'}}>{currentUser.includes('@') ? currentUser.split('@')[0] : currentUser}</strong>
+              </div>
               <button 
-                className="btn btn-primary btn-sm interactive" 
+                className="btn btn-primary btn-sm interactive premium-glow" 
                 style={{borderRadius: '50px'}}
                 onClick={() => {
                   localStorage.removeItem('currentUser');
