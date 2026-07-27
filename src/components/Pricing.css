@@ -19,13 +19,13 @@
 }
 
 .pricing-card:hover {
-  border-color: rgba(202, 255, 4, 0.3);
+  border-color: rgba(162, 89, 255, 0.3);
   transform: translateY(-10px);
 }
 
 .pricing-card.recommended {
   border-color: var(--accent-primary);
-  background: linear-gradient(145deg, var(--bg-tertiary) 0%, rgba(202, 255, 4, 0.05) 100%);
+  background: linear-gradient(145deg, var(--bg-tertiary) 0%, rgba(162, 89, 255, 0.05) 100%);
   transform: scale(1.05);
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
 }

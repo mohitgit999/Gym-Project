@@ -24,41 +24,31 @@
 .logo {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  font-family: var(--font-heading);
-  font-size: 1.8rem;
-  font-weight: 800;
-  letter-spacing: 0.1em;
+  gap: 0.2rem;
+  color: #fff;
 }
 
-.nav-links {
+.nav-links-center {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 2.5rem;
 }
 
-.nav-links a {
-  font-family: var(--font-heading);
-  font-weight: 600;
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  position: relative;
+.nav-links-center a {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  transition: color var(--transition-fast);
 }
 
-.nav-links a::after {
-  content: '';
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: var(--accent-primary);
-  transition: width var(--transition-fast);
+.nav-links-center a:hover, .nav-links-center a.active {
+  color: #fff;
 }
 
-.nav-links a:hover::after {
-  width: 100%;
+.nav-actions {
+  display: flex;
+  align-items: center;
 }
 
 .menu-toggle {
@@ -68,8 +58,13 @@
   color: var(--text-primary);
 }
 
-@media (max-width: 768px) {
-  .nav-links {
+@media (max-width: 992px) {
+  .nav-links-center, .nav-actions {
+    display: none; /* simple responsive toggle later */
+  }
+
+  .nav-links-center.open {
+    display: flex;
     position: absolute;
     top: 100%;
     left: 0;
@@ -78,17 +73,7 @@
     background-color: var(--bg-secondary);
     padding: 2rem;
     gap: 1.5rem;
-    transform: translateY(-20px);
-    opacity: 0;
-    visibility: hidden;
-    transition: all var(--transition-normal);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  }
-
-  .nav-links.open {
-    transform: translateY(0);
-    opacity: 1;
-    visibility: visible;
   }
 
   .menu-toggle {

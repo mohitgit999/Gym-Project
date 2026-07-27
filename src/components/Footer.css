@@ -1,88 +1,64 @@
 .footer {
-  background-color: var(--bg-secondary);
-  border-top: 1px solid var(--bg-tertiary);
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-  padding: var(--space-xl) 0 2rem;
-}
-
-.footer.active {
-  opacity: 1;
-  transform: translateY(0);
+  background-color: var(--bg-primary);
+  padding: 4rem 0 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .footer-container {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  gap: 4rem;
-  margin-bottom: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
 }
 
-.footer-text {
+.footer-left .logo {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.footer-copy {
   color: var(--text-secondary);
-  margin: 1.5rem 0;
-  max-width: 400px;
+  font-size: 0.85rem;
 }
 
 .social-links {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .social-links a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  background-color: var(--bg-tertiary);
-  border-radius: 50%;
-  color: var(--text-primary);
-  transition: all var(--transition-normal);
+  color: var(--text-secondary);
+  font-size: 1.25rem;
+  transition: color 0.3s;
 }
 
 .social-links a:hover {
-  background-color: var(--accent-primary);
-  color: var(--bg-primary);
-  transform: translateY(-3px);
+  color: var(--accent-primary);
 }
 
-.footer h4 {
-  font-size: 1.2rem;
-  margin-bottom: 1.5rem;
-}
-
-.footer-links ul {
+.footer-links {
   display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
+  gap: 2rem;
 }
 
 .footer-links a {
   color: var(--text-secondary);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: color 0.3s;
 }
 
 .footer-links a:hover {
   color: var(--accent-primary);
-  padding-left: 5px;
-}
-
-.footer-contact p {
-  color: var(--text-secondary);
-  margin-bottom: 0.8rem;
-}
-
-.footer-bottom {
-  padding-top: 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-  color: var(--text-tertiary);
-  font-size: 0.9rem;
 }
 
 @media (max-width: 768px) {
   .footer-container {
-    grid-template-columns: 1fr;
-    gap: 2rem;
+    flex-direction: column;
+    text-align: center;
   }
 }

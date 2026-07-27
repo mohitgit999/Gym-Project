@@ -1,45 +1,37 @@
 import React from 'react';
-import { FaDumbbell, FaInstagram, FaTwitter, FaFacebook } from 'react-icons/fa';
+import { FaInstagram, FaTwitter, FaFacebook } from 'react-icons/fa';
 import './Footer.css';
 
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="container footer-container">
-        <div className="footer-brand">
+        <div className="footer-left">
           <a href="#home" className="logo">
-            <FaDumbbell className="text-accent" />
-            <span>LUMIN<span className="text-accent">FIT</span></span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="brand-icon" style={{marginRight: '8px'}}>
+              <path d="M4 10L14 2L12 10H20L10 22L12 14H4V10Z" fill="var(--accent-primary)"/>
+            </svg>
+            <span style={{fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: '1.5rem'}}>FiTusion</span>
           </a>
-          <p className="footer-text">
-            Elevating fitness to an art form. Join us and transform your body and mind in our state-of-the-art facilities.
-          </p>
+          <p className="footer-copy">&copy; 2026 FiTusion. All rights reserved.</p>
+        </div>
+        
+        <div className="footer-center">
           <div className="social-links">
-            <a href="https://instagram.com" target="_blank" rel="noreferrer"><FaInstagram /></a>
-            <a href="https://twitter.com" target="_blank" rel="noreferrer"><FaTwitter /></a>
-            <a href="https://facebook.com" target="_blank" rel="noreferrer"><FaFacebook /></a>
+            <a href="https://instagram.com" target="_blank" rel="noreferrer" className="interactive"><FaInstagram /></a>
+            <a href="https://twitter.com" target="_blank" rel="noreferrer" className="interactive"><FaTwitter /></a>
+            <a href="https://facebook.com" target="_blank" rel="noreferrer" className="interactive"><FaFacebook /></a>
           </div>
         </div>
-        
-        <div className="footer-links">
-          <h4>Explore</h4>
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#classes">Classes</a></li>
-            <li><a href="#trainers">Trainers</a></li>
-            <li><a href="#pricing">Pricing</a></li>
-          </ul>
+
+        <div className="footer-right">
+          <div className="footer-links">
+            <a href="#home" className="interactive">Home</a>
+            <a href="#about" className="interactive">About</a>
+            <a href="#features" className="interactive">Features</a>
+            <a href="#newsletter" className="interactive">Contact</a>
+          </div>
         </div>
-        
-        <div className="footer-contact">
-          <h4>Contact Us</h4>
-          <p>123 Fitness Ave, NY 10001</p>
-          <p>info@luminfit.com</p>
-          <p>(555) 123-4567</p>
-        </div>
-      </div>
-      <div className="footer-bottom text-center">
-        <p>&copy; 2026 LuminFit. All rights reserved.</p>
       </div>
     </footer>
   );
